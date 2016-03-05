@@ -1,6 +1,6 @@
 ﻿namespace Encapsulation
 {
-    public class LastChange
+    internal class LastChange
     {
         public LastChange(int value, Point valueLocation, Point zeroLocation)
         {

@@ -2,7 +2,7 @@
 
 namespace Encapsulation
 {
-    public class GameDecorator : IGame
+    internal class GameDecorator : IGame
     {
         private readonly IGame _game;
         private readonly LastChange _lastChange;
