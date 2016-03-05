@@ -3,11 +3,13 @@ using NUnit.Framework;
 
 namespace EncapsulationTests
 {
-    public class GameTests : GameTestsBase
+    [TestFixture]
+    public class RefactoredGameTests : GameTestsBase
     {
         public override void SetUp()
         {
-            Game = new Game(1, 2, 3, 0);
+            Game = new RefactoredGame(1, 2, 3, 0);
+            base.SetUp();
         }
 
         [Test]
@@ -26,21 +28,6 @@ namespace EncapsulationTests
         public override void ShiftTest()
         {
             base.ShiftTest();
-        }
-
-        [Test]
-        public void MutableShiftTest()
-        {
-            var game = Game as Game;
-
-            if (game == null)
-            {
-                Assert.Fail();
-            }
-
-            game.MutableShift(2);
-            Assert.AreEqual(Game[1, 1], 2);
-            Assert.AreEqual(Game[0, 1], 0);
         }
     }
 }

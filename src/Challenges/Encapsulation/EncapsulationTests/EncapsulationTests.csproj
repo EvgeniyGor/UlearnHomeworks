@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework">
-      <HintPath>..\..\..\..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+      <HintPath>..\..\..\..\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -50,12 +50,15 @@
   </Choose>
   <ItemGroup>
     <Compile Include="GameTests.cs" />
+    <Compile Include="GameTestsBase.cs" />
+    <Compile Include="PointTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefactoredGameTests.cs" />
     <Compile Include="TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Encapsulation\Encapsulation.csproj">
-      <Project>{f7b33964-0f87-49f2-ad8d-65b481901f32}</Project>
+      <Project>{F7B33964-0F87-49F2-AD8D-65B481901F32}</Project>
       <Name>Encapsulation</Name>
     </ProjectReference>
   </ItemGroup>
