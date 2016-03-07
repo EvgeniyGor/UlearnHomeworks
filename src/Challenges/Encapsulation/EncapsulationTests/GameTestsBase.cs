@@ -23,7 +23,11 @@ namespace EncapsulationTests
 
         public virtual void ShiftTest()
         {
-            var shifted = Game.Shift(3).Shift(1).Shift(2).Shift(3);
+            var shifted = Game
+                .Shift(3)
+                .Shift(1)
+                .Shift(2)
+                .Shift(3);
             Assert.AreEqual(shifted[0, 0], 2);
             Assert.AreEqual(shifted[0, 1], 3);
             Assert.AreEqual(shifted[1, 0], 1);

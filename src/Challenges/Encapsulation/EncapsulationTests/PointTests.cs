@@ -17,7 +17,7 @@ namespace EncapsulationTests
                 new Point(1, 2),
                 new Point(2, 1)
             }
-                .Select(i => i.IsNeigbor(point))
+                .Select(i => i.IsNeighbor(point))
                 .All(i => i == true);
 
             Assert.True(isAllNeigbors);
@@ -34,7 +34,7 @@ namespace EncapsulationTests
                 new Point(2, 0),
                 new Point(2, 2),
             }
-                .Select(i => i.IsNeigbor(point))
+                .Select(i => i.IsNeighbor(point))
                 .All(i => i == false);
 
             Assert.True(isNooneNeigbor);

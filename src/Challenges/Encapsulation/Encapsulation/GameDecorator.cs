@@ -48,7 +48,7 @@ namespace Encapsulation
             var valueLocation = _game.GetLocation(value);
             var zeroLocation = _lastChange.NewZeroLocation;
 
-            if (valueLocation.IsNeigbor(zeroLocation))
+            if (valueLocation.IsNeighbor(zeroLocation))
             {
                 return new GameDecorator(this, new LastChange(value, zeroLocation, valueLocation));
             }

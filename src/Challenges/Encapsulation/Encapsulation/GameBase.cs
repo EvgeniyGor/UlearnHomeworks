@@ -10,7 +10,8 @@ namespace Encapsulation
         protected GameBase(params int[] tileNumbers)
         {
             FieldSize = Convert.ToInt32(Math.Sqrt(tileNumbers.Length));
-
+            
+            //todo: it is very bad to uese exceptions in ctors, use factory methods
             if (FieldSize * FieldSize != tileNumbers.Length)
             {
                 throw new ArgumentException();
@@ -36,12 +37,12 @@ namespace Encapsulation
         {
             get
             {
-                if (IsInField(new Point(row, column)))
+                if (!IsInField(row, column))
                 {
-                    return Tiles[row, column];
+                    throw new ArgumentException($"Значения индексов {nameof(row)} и {nameof(column)} вне границ поля");
                 }
 
-                throw new ArgumentException($"Значения индексов {nameof(row)} и {nameof(column)} вне границ поля");
+                return Tiles[row, column];
             }
         }
 
@@ -59,7 +60,12 @@ namespace Encapsulation
 
         private bool IsInField(Point point)
         {
-            return point.Row >= 0 && point.Row < FieldSize && point.Column >= 0 && point.Column < FieldSize;
+            return IsInField(point.Row, point.Column);
+        }
+
+        private bool IsInField(int row, int column)
+        {
+            return row >= 0 && row < FieldSize && column >= 0 && column < FieldSize;
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Encapsulation
             var valueLocation = LocationCache[value];
             var zeroLocation = LocationCache[0];
 
-            if (valueLocation.IsNeigbor(zeroLocation))
+            if (valueLocation.IsNeighbor(zeroLocation))
             {
                 return new GameDecorator(this, new LastChange(value, zeroLocation, valueLocation));
             }
