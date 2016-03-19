@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01CB57E6-C5F9-4BC6-996E-1AB49E9AFDA0}</ProjectGuid>
+    <ProjectGuid>{5AD80C55-7E43-4B4F-ACE8-D3459C39D58E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PolymorphismTests</RootNamespace>
-    <AssemblyName>PolymorphismTests</AssemblyName>
+    <RootNamespace>ChallengesTests</RootNamespace>
+    <AssemblyName>ChallengesTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework">
-      <HintPath>..\..\..\..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+      <HintPath>..\..\..\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -49,7 +49,25 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Encapsulation\GameTests.cs" />
+    <Compile Include="Encapsulation\GameTestsBase.cs" />
+    <Compile Include="Encapsulation\PointTests.cs" />
+    <Compile Include="Encapsulation\RefactoredGameTests.cs" />
+    <Compile Include="Encapsulation\TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Polymorphism\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Encapsulation\Encapsulation.csproj">
+      <Project>{f7b33964-0f87-49f2-ad8d-65b481901f32}</Project>
+      <Name>Encapsulation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Polymorphism\Polymorphism.csproj">
+      <Project>{3dc89606-9905-4a82-978d-ad53aaf2e373}</Project>
+      <Name>Polymorphism</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

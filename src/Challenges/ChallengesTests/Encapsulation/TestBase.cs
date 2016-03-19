@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace EncapsulationTests
+namespace ChallengesTests.Encapsulation
 {
     [TestFixture]
     public class TestBase

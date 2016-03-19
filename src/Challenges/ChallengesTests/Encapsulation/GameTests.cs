@@ -1,7 +1,7 @@
 ﻿using Encapsulation;
 using NUnit.Framework;
 
-namespace EncapsulationTests
+namespace ChallengesTests.Encapsulation
 {
     public class GameTests : GameTestsBase
     {
