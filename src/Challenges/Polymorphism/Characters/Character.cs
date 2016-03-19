@@ -30,22 +30,10 @@ namespace Polymorphism.Characters
             set { _mana = value; }
         }
 
-        public int Armor
-        {
-            get { return _armor + Effects.Sum(i => i.StatsChanges.Armor); }
-            set { _armor = value; }
-        }
-
         public int Strength
         {
             get { return _strength + Effects.Sum(i => i.StatsChanges.Strength); }
             set { _strength = value; }
-        }
-
-        public int Stamina
-        {
-            get { return _stamina + Effects.Sum(i => i.StatsChanges.Stamina); }
-            set { _stamina = value; }
         }
 
         public Dictionary<string, ISkill> Skills { get; }

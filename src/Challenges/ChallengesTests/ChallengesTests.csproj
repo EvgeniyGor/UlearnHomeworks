@@ -53,12 +53,11 @@
     <Compile Include="Encapsulation\GameTestsBase.cs" />
     <Compile Include="Encapsulation\PointTests.cs" />
     <Compile Include="Encapsulation\RefactoredGameTests.cs" />
-    <Compile Include="Encapsulation\TestBase.cs" />
+    <Compile Include="Polymorphism\CharacterTests.cs" />
+    <Compile Include="TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Polymorphism\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Encapsulation\Encapsulation.csproj">
       <Project>{f7b33964-0f87-49f2-ad8d-65b481901f32}</Project>

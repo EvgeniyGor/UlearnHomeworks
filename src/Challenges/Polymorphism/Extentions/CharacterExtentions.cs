@@ -10,14 +10,13 @@ namespace Polymorphism.Extentions
             character.Effects.Add(effect);
         }
 
-        public static void CastSkill(this ICharacter character, string skillName, ICharacter target)
+        public static void CastSkill(this ICharacter character, ISkill skill, ICharacter target)
         {
-            if (!character.Skills.ContainsKey(skillName))
+            if (!character.Skills.ContainsValue(skill))
             {
-                throw new ArgumentException($"Character doesn't have skill {skillName}");
+                throw new ArgumentException($"Character doesn't have skill {skill}");
             }
 
-            var skill = character.Skills[skillName];
             character.Mana -= skill.Cost;
             target.AddEffect(skill.Effect);
         }
