@@ -2,7 +2,7 @@
 using Polymorphism.Characters;
 using Polymorphism.Extentions;
 using Polymorphism.Interfaces;
-using Polymorphism.Skills;
+using Polymorphism.Spells;
 
 namespace ChallengesTests.Polymorphism
 {
@@ -13,14 +13,14 @@ namespace ChallengesTests.Polymorphism
 
         public override void SetUp()
         {
-            _firstCharacter = new Character(new[] { new Blizzard() })
+            _firstCharacter = new Wizzard(new[] { new Blizzard() })
             {
                 Health = 100,
                 Mana = 100,
                 Strength = 100,
             };
 
-            _secondCharacter = new Character(new[] { new Blizzard() })
+            _secondCharacter = new Wizzard(new[] { new Blizzard() })
             {
                 Health = 100,
                 Mana = 100,
@@ -39,7 +39,7 @@ namespace ChallengesTests.Polymorphism
         [Test]
         public void CastSkillTest()
         {
-            var skill = _firstCharacter.Skills["Blizzard"];
+            var skill = _firstCharacter.Spells["Blizzard"];
 
             _firstCharacter.CastSkill(skill, _secondCharacter);
 

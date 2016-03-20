@@ -1,8 +1,10 @@
-﻿namespace Polymorphism.Interfaces
+﻿using System;
+
+namespace Polymorphism.Interfaces
 {
     public interface IEffect
     {
         string Name { get; }
-        IStats StatsChanges { get; }
+        Func<Stats, Stats> StatsChanges { get; }
     }
 }

@@ -2,9 +2,13 @@
 
 namespace Polymorphism.Interfaces
 {
-    public interface ICharacter : IStats
+    public interface ICharacter
     {
-        Dictionary<string, ISkill> Skills { get; }
+        Stats Stats { get; }
+        Dictionary<string, ISpell> Spells { get; }
         List<IEffect> Effects { get; }
+
+        void AddEffect(IEffect effect);
+        void CastSkill(string spellName, ICharacter target);
     }
 }

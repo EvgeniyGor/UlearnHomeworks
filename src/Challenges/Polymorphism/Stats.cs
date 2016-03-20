@@ -1,13 +1,9 @@
-﻿using Polymorphism.Interfaces;
-
-namespace Polymorphism
+﻿namespace Polymorphism
 {
-    public struct Stats : IStats
+    public class Stats
     {
         public int Health { get; set; }
         public int Mana { get; set; }
         public int Armor { get; set; }
-        public int Strength { get; set; }
-        public int Stamina { get; set; }
     }
 }

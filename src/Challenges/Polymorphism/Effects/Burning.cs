@@ -3,15 +3,15 @@ using Polymorphism.Interfaces;
 
 namespace Polymorphism.Effects
 {
-    public class Freezing : IEffect
+    public class Burning : IEffect
     {
-        public string Name { get; } = "Freezing";
+        public string Name { get; } = "Burning";
 
         public Func<Stats, Stats> StatsChanges { get; } = stats => new Stats
         {
-            Health = stats.Health -= 30,
+            Health = stats.Health -= 50,
             Mana = stats.Mana /= 2,
-            Armor = stats.Armor += 20
+            Armor = stats.Armor -= 100
         };
     }
 }

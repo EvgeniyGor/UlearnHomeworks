@@ -1,42 +1,43 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using Polymorphism.Interfaces;
 
 namespace Polymorphism.Characters
 {
     public class Character : ICharacter
     {
-        private int _health;
-        private int _mana;
-        private int _armor;
-        private int _strength;
-        private int _stamina;
+        public List<IEffect> Effects { get; set; } = new List<IEffect>();
 
-        public Character(IEnumerable<ISkill> skills)
+        public Stats Stats { get; protected set; }
+        public Dictionary<string, ISpell> Spells { get; protected set; }
+
+        protected Stats ChangedStats { get; set; }
+
+        public void AddEffect(IEffect effect)
         {
-            Skills = skills.ToDictionary(key => key.Name, value => value);
-            Effects = new List<IEffect>();
+            Effects.Add(effect);
+
+            ChangedStats = Stats;
+            Effects.ForEach(i => i.StatsChanges(ChangedStats));
         }
 
-        public int Health
+        public void CastSkill(string spellName, ICharacter target)
         {
-            get { return _health + Effects.Sum(i => i.StatsChanges.Health); }
-            set { _health = value; }
-        }
+            if (!Spells.ContainsKey(spellName))
+            {
+                throw new ArgumentException($"Character doesn't have spell {spellName}");
+            }
 
-        public int Mana
-        {
-            get { return _mana + Effects.Sum(i => i.StatsChanges.Mana); }
-            set { _mana = value; }
-        }
+            if (Spells[spellName]?.Cooldown != 0)
+            {
+                return;
+            }
 
-        public int Strength
-        {
-            get { return _strength + Effects.Sum(i => i.StatsChanges.Strength); }
-            set { _strength = value; }
-        }
+            Spells[spellName].Cooldown = Spells[spellName].ReloadTime;
 
-        public Dictionary<string, ISkill> Skills { get; }
-        public List<IEffect> Effects { get; }
+            Stats.Mana -= Spells[spellName].Cost;
+
+            target.AddEffect(Spells[spellName].Effect);
+        }
     }
 }
