@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encapsulation", "Encapsulat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{3DC89606-9905-4A82-978D-AD53AAF2E373}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generics.csproj", "{97D3EC72-A4CC-40E2-98D8-E7D83DE3923B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3DC89606-9905-4A82-978D-AD53AAF2E373}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DC89606-9905-4A82-978D-AD53AAF2E373}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DC89606-9905-4A82-978D-AD53AAF2E373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D3EC72-A4CC-40E2-98D8-E7D83DE3923B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D3EC72-A4CC-40E2-98D8-E7D83DE3923B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D3EC72-A4CC-40E2-98D8-E7D83DE3923B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D3EC72-A4CC-40E2-98D8-E7D83DE3923B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -53,6 +53,8 @@
     <Compile Include="Encapsulation\GameTestsBase.cs" />
     <Compile Include="Encapsulation\PointTests.cs" />
     <Compile Include="Encapsulation\RefactoredGameTests.cs" />
+    <Compile Include="Generics\MyEntity.cs" />
+    <Compile Include="Generics\ProcessorTests.cs" />
     <Compile Include="Polymorphism\CharacterTests.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +64,10 @@
     <ProjectReference Include="..\Encapsulation\Encapsulation.csproj">
       <Project>{f7b33964-0f87-49f2-ad8d-65b481901f32}</Project>
       <Name>Encapsulation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Generics\Generics.csproj">
+      <Project>{97d3ec72-a4cc-40e2-98d8-e7d83de3923b}</Project>
+      <Name>Generics</Name>
     </ProjectReference>
     <ProjectReference Include="..\Polymorphism\Polymorphism.csproj">
       <Project>{3dc89606-9905-4a82-978d-ad53aaf2e373}</Project>

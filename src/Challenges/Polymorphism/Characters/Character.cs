@@ -6,12 +6,12 @@ namespace Polymorphism.Characters
 {
     public class Character : ICharacter
     {
-        public List<IEffect> Effects { get; set; } = new List<IEffect>();
+        public List<IEffect> Effects { get; } = new List<IEffect>();
 
         public Stats Stats { get; protected set; }
         public Dictionary<string, ISpell> Spells { get; protected set; }
 
-        protected Stats ChangedStats { get; set; }
+        private Stats ChangedStats { get; set; }
 
         public void AddEffect(IEffect effect)
         {

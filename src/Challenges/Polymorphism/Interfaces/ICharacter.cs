@@ -4,7 +4,6 @@ namespace Polymorphism.Interfaces
 {
     public interface ICharacter
     {
-        Stats Stats { get; }
         Dictionary<string, ISpell> Spells { get; }
         List<IEffect> Effects { get; }
 
