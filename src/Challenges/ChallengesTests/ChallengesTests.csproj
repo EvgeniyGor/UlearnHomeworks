@@ -53,8 +53,8 @@
     <Compile Include="Encapsulation\GameTestsBase.cs" />
     <Compile Include="Encapsulation\PointTests.cs" />
     <Compile Include="Encapsulation\RefactoredGameTests.cs" />
-    <Compile Include="Generics\MyEntity.cs" />
     <Compile Include="Generics\ProcessorTests.cs" />
+    <Compile Include="Generics\StorageTests.cs" />
     <Compile Include="Polymorphism\CharacterTests.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

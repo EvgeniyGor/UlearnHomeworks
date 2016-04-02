@@ -1,5 +1,5 @@
-﻿using Generics;
-using Generics.Processors;
+﻿using Generics.FluentApi;
+using Generics.FluentApi.Processors;
 using NUnit.Framework;
 
 namespace ChallengesTests.Generics

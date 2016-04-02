@@ -40,16 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IEngine.cs" />
-    <Compile Include="Interfaces\IEntity.cs" />
-    <Compile Include="Interfaces\ILogger.cs" />
-    <Compile Include="Interfaces\IProcessor.cs" />
-    <Compile Include="MyEngine.cs" />
-    <Compile Include="MyLogger.cs" />
-    <Compile Include="Processors\EngineProcessor.cs" />
-    <Compile Include="Processors\EntityProcessor.cs" />
-    <Compile Include="Processors\LoggerProcessor.cs" />
-    <Compile Include="Processors\Processor.cs" />
+    <Compile Include="IdStorage\Container.cs" />
+    <Compile Include="IdStorage\Storage.cs" />
+    <Compile Include="FluentApi\Interfaces.cs" />
+    <Compile Include="FluentApi\Models.cs" />
+    <Compile Include="FluentApi\Processors\FluentEngine.cs" />
+    <Compile Include="FluentApi\Processors\FluentEntity.cs" />
+    <Compile Include="FluentApi\Processors\Processor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
