@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IdStorage\Container.cs" />
     <Compile Include="IdStorage\Storage.cs" />
     <Compile Include="FluentApi\Interfaces.cs" />
     <Compile Include="FluentApi\Models.cs" />

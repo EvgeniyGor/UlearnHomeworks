@@ -1,6 +1,6 @@
 ﻿namespace Generics.FluentApi.Processors
 {
-    public sealed class FluentEntity
+    public sealed class FluentEntity : IFluentEntity
     {
         private readonly Processor _processor;
 
@@ -14,5 +14,8 @@
             _processor.Logger = new TLogger();
             return _processor;
         }
+
+        public IEngine Engine => _processor.Engine;
+        public IEntity Entity => _processor.Entity;
     }
 }

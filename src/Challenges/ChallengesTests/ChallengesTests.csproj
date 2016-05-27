@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FakeItEasy, Version=1.25.3.0, Culture=neutral, PublicKeyToken=eff28e2146d5fd2c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\FakeItEasy.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\..\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -49,6 +53,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Delegates\DelegatesTest.cs" />
     <Compile Include="Encapsulation\GameTests.cs" />
     <Compile Include="Encapsulation\GameTestsBase.cs" />
     <Compile Include="Encapsulation\PointTests.cs" />
@@ -59,8 +64,11 @@
     <Compile Include="TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Delegates\Delegates.csproj">
+      <Project>{9afd6a7c-7b7d-4a3f-8ac3-462b8e72fe01}</Project>
+      <Name>Delegates</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Encapsulation\Encapsulation.csproj">
       <Project>{f7b33964-0f87-49f2-ad8d-65b481901f32}</Project>
       <Name>Encapsulation</Name>
