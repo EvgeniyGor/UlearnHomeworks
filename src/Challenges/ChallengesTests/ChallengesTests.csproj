@@ -40,6 +40,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\lib\FakeItEasy.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="nunit.framework">
       <HintPath>..\..\..\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -60,6 +61,7 @@
     <Compile Include="Encapsulation\GameTestsBase.cs" />
     <Compile Include="Encapsulation\PointTests.cs" />
     <Compile Include="Encapsulation\RefactoredGameTests.cs" />
+    <Compile Include="Files\FilesTests.cs" />
     <Compile Include="Generics\ProcessorTests.cs" />
     <Compile Include="Generics\StorageTests.cs" />
     <Compile Include="MemoryHandling\BitmapEditorTests.cs" />
@@ -77,6 +79,10 @@
     <ProjectReference Include="..\Encapsulation\Encapsulation.csproj">
       <Project>{f7b33964-0f87-49f2-ad8d-65b481901f32}</Project>
       <Name>Encapsulation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Files\Files.csproj">
+      <Project>{f27dd852-6240-4565-a3e3-d804e83f3a60}</Project>
+      <Name>Files</Name>
     </ProjectReference>
     <ProjectReference Include="..\Generics\Generics.csproj">
       <Project>{97d3ec72-a4cc-40e2-98d8-e7d83de3923b}</Project>
