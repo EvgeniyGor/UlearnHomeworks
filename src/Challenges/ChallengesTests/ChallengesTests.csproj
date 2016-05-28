@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ChallengesTests</RootNamespace>
     <AssemblyName>ChallengesTests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -16,6 +16,7 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,7 @@
       <HintPath>..\..\..\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -60,7 +62,10 @@
     <Compile Include="Encapsulation\RefactoredGameTests.cs" />
     <Compile Include="Generics\ProcessorTests.cs" />
     <Compile Include="Generics\StorageTests.cs" />
+    <Compile Include="MemoryHandling\BitmapEditorTests.cs" />
+    <Compile Include="MemoryHandling\TimerTests.cs" />
     <Compile Include="Polymorphism\CharacterTests.cs" />
+    <Compile Include="Reflection\DerivatorTests.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,9 +82,17 @@
       <Project>{97d3ec72-a4cc-40e2-98d8-e7d83de3923b}</Project>
       <Name>Generics</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MemoryHandling\MemoryHandling.csproj">
+      <Project>{d14c5fe9-c629-4ebb-95fe-90419df3b263}</Project>
+      <Name>MemoryHandling</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Polymorphism\Polymorphism.csproj">
       <Project>{3dc89606-9905-4a82-978d-ad53aaf2e373}</Project>
       <Name>Polymorphism</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reflection\Derivation\Derivation.csproj">
+      <Project>{17eb9eb9-ad3a-4422-aa2a-6cf2e271d976}</Project>
+      <Name>Derivation</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
