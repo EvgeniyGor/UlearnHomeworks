@@ -56,6 +56,10 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="DDD\CellTests.cs" />
+    <Compile Include="DDD\GameTests.cs" />
+    <Compile Include="DDD\GridTests.cs" />
+    <Compile Include="DDD\PointTests.cs" />
     <Compile Include="Delegates\DelegatesTest.cs" />
     <Compile Include="Encapsulation\GameTests.cs" />
     <Compile Include="Encapsulation\GameTestsBase.cs" />
@@ -72,6 +76,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DDD\DDD.csproj">
+      <Project>{f2eb6085-4b04-4e03-a687-81ddd9b30756}</Project>
+      <Name>DDD</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Delegates\Delegates.csproj">
       <Project>{9afd6a7c-7b7d-4a3f-8ac3-462b8e72fe01}</Project>
       <Name>Delegates</Name>
@@ -101,6 +109,7 @@
       <Name>Derivation</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
